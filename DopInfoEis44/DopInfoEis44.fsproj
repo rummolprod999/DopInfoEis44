@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <WarnOn>3390;$(WarnOn)</WarnOn>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="DocumentBuilder.fs" />
+        <Compile Include="Iparser.fs" />
+        <Compile Include="IDocument.fs" />
+        <Compile Include="Argument.fs" />
+        <Compile Include="ModuleRegexpExtensions.fs" />
+        <Compile Include="ModuleStringExtensions.fs" />
+        <Compile Include="ModuleNewtonExtensions.fs" />
+        <Compile Include="ModuleEnvVariables.fs" />
+        <Compile Include="RegionContext.fs" />
+        <Compile Include="ArchiveAddInfo44.fs" />
+        <Compile Include="AbstractDocumentFtpEis.fs" />
+        <Compile Include="Logger.fs" />
+        <Compile Include="AbstractParserFtpEis.fs" />
+        <Compile Include="DocumentAddInfo44.fs" />
+        <Compile Include="ParserAddInfo44.fs" />
+        <Compile Include="AllParsers.fs" />
+        <Compile Include="Executor.fs" />
+        <Compile Include="EnvSetter.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include=".dockerignore" />
+      <Content Include="Dockerfile" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentFTP" Version="34.0.1" />
+      <PackageReference Include="FSharp.Data" Version="4.1.1" />
+      <PackageReference Include="MySql.Data" Version="8.0.26" />
+      <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+</Project>
